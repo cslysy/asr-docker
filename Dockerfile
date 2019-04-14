@@ -26,7 +26,9 @@ RUN git clone https://github.com/kpu/kenlm.git && \
 WORKDIR /opt
 
 RUN pip install pyparsing && \
-    git clone https://github.com/cslysy/JSGFTools.git
+    git clone https://github.com/cslysy/JSGFTools.git && \
+    cd JSGFTools && \
+    git checkout 907b91791abe523817b2c2f8e77c66a83d74935e
 
 RUN pip3 install deepspeech
 
